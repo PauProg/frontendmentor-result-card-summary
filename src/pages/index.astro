@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Result from "../components/Result.astro";
+import Memory from "../images/icon-memory.svg";
+import Reaction from "../images/icon-reaction.svg";
+import Verbal from "../images/icon-verbal.svg";
+import Visual from "../images/icon-visual.svg";
+---
+
+<Layout title="Frontend Mentor | Result Card Summary">
+	<main class="w-[600px] flex">
+		<div
+			class="flex flex-col items-center big-block w-1/2 rounded-3xl px-12 py-6"
+		>
+			<h3 class="text-blue-200 opacity-70 font-bold text-xl mb-7">
+				Your Result
+			</h3>
+			<div
+				class="number flex flex-col items-center p-7 w-[65%] rounded-full mb-7"
+			>
+				<h1 class="text-white font-bold text-5xl mb-1">76</h1>
+				<p class="text-blue-300 opacity-50">of 100</p>
+			</div>
+			<h3 class="text-white font-semibold text-3xl mb-2">Great</h3>
+			<p class="text-blue-200 opacity-70 text-center text-sm mb-5">
+				You scored higher than 65% of the people who have taken these
+				tests.
+			</p>
+		</div>
+		<div class="px-8 py-6 w-1/2 rounded-3xl">
+			<h2 class="font-semibold text-xl mb-5">Summary</h2>
+			<div class="flex flex-col gap-4">
+				<Result src={ Memory } alt="icon" title="Reaction" score="80" color="#FFF6F5" text="red" />
+				<Result src={ Reaction } alt="icon" title="Memory" score="92" color="#FFFBF2" text="yellow" />
+				<Result src={ Verbal } alt="icon" title="Verbal" score="61" color="#F2FBFA" text="green" />
+				<Result src={ Visual } alt="icon" title="Visual" score="72" color="#F3F3FD" text="purple" />
+			</div>
+			<button
+				class="bg-[#303B59] text-white font-semibold text-lg w-full py-3 mt-7 rounded-full"
+			>
+				Continue
+			</button>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	div.big-block {
+		background-image: linear-gradient(180deg, #6743ff, #312cea);
+	}
+
+	div.number {
+		background-image: linear-gradient(0deg, #6743ff, #312cea);
+	}
+
+	div.px-8 {
+		box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	button {
+		transition: all ease .55s;
+	}
+
+	button:hover{
+		background-image: linear-gradient(180deg, #6743ff, #312cea);
+	}
+</style>

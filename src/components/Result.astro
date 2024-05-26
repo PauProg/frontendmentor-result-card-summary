@@ -1,0 +1,25 @@
+---
+import type { ImageMetadata } from "astro";
+
+interface props {
+    desktopImgUrl: string | ImageMetadata;
+    alt: string;
+}
+
+const { title, score, color, src, alt, text } = Astro.props;
+
+---
+
+<div
+    style=`background-color: ${color}`
+    class="flex justify-between items-center px-3 py-2 rounded-lg"
+>
+    <div class="flex gap-2">
+        <img src={ src.src } alt={ alt } />
+        <p style=`color: ${text}` class="text-sm font-semibold opacity-60">{title}</p>
+    </div>
+    <div class="flex justify-center items-center gap-2">
+        <p class="font-semibold">{score}</p>
+        <p class="text-gray-500 opacity-30 font-semibold">/ 100</p>
+    </div>
+</div>
