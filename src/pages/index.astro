@@ -8,9 +8,9 @@ import Visual from "../images/icon-visual.svg";
 ---
 
 <Layout title="Frontend Mentor | Result Card Summary">
-	<main class="w-[600px] flex">
+	<main class="lg:w-[600px] sm:h-svh lg:h-full lg:flex lg:flex-row sm:flex-col sm:w-screen">
 		<div
-			class="flex flex-col items-center big-block w-1/2 rounded-3xl px-12 py-6"
+			class="flex flex-col sm:h-1/2 sm:justify-center items-center big-block lg:w-1/2 sm:w-screen lg:rounded-3xl px-12 py-6 sm:rounded-b-3xl"
 		>
 			<h3 class="text-blue-200 opacity-70 font-bold text-xl mb-7">
 				Your Result
@@ -27,7 +27,7 @@ import Visual from "../images/icon-visual.svg";
 				tests.
 			</p>
 		</div>
-		<div class="px-8 py-6 w-1/2 rounded-3xl">
+		<div class="px-8 py-6 sm:h-1/2 justify-center flex flex-col lg:w-1/2 sm:w-screen rounded-3xl">
 			<h2 class="font-semibold text-xl mb-5">Summary</h2>
 			<div class="flex flex-col gap-4">
 				<Result src={ Memory } alt="icon" title="Reaction" score="80" color="#FFF6F5" text="red" />
